@@ -3,7 +3,6 @@ import { Box } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import { SideBarItem } from '../SideBarItem/SideBarItem';
 import AppsIcon from '@mui/icons-material/Apps';
 import GraphicEqIcon from '@mui/icons-material/GraphicEq';
@@ -19,6 +18,8 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import LanguageIcon from '@mui/icons-material/Language';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
+import RightSideBar from '../RightSideBar/RightSideBar';
+import MainContent from '../MainContent/MainContent';
 
 const items = [
     {
@@ -107,8 +108,7 @@ const DashboardLayout = () => {
         setOpen(false);
     };
 
-    ///// Side bar content///// 
-
+    ///// Sidebar content///// 
     const content = (
         <>
             <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', color: 'white', }} >
@@ -168,18 +168,15 @@ const DashboardLayout = () => {
 
                 {/* Dashboard main */}
                 <Main open={open} className="bg-black min-h-screen">
+                    {/* Main content middle */}
                     <div className='grid grid-cols-12'>
                         <div className="col-span-7 pt-5">
-                            <IconButton
-                                onClick={handleDrawerOpen}
-                                edge="start"
-                                sx={{ marginX: "15px", width: "6%", ...(open && { display: 'none' }) }}>
-                                <MenuIcon className="text-4xl text-white" />
-                            </IconButton>
-                            <h2 className={`${open && "ml-8"} ${'text-3xl text-white inline-block border-b-2 border-[#3772FF]'}`}>Section</h2>
+                            <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
                         </div>
-                        <div className="col-span-5 border-l border-gray-500 min-h-screen">
 
+                        {/* Right Side bar  */}
+                        <div className="col-span-5 border-l border-gray-500 min-h-screen">
+                            <RightSideBar />
                         </div>
                     </div>
                 </Main>
