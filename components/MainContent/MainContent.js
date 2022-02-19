@@ -1,24 +1,17 @@
-import { IconButton } from '@mui/material';
 import React from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
 import CancelIcon from '@mui/icons-material/Cancel';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import AlbumIcon from '@mui/icons-material/Album';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import TableData from '../TableData/TableData';
 
 
 
-const MainContent = ({ handleDrawerOpen, open }) => {
+const MainContent = () => {
     return (
         <>
             <div className='flex items-center flex-wrap justify-between mt-4 mx-10'>
                 <div>
-                    <IconButton
-                        onClick={handleDrawerOpen}
-                        edge="start"
-                        sx={{ marginRight: "5px", ...(open && { display: 'none' }) }}>
-                        <MenuIcon className="text-4xl text-white" />
-                    </IconButton>
                     <h2 className='text-2xl text-white font-semibold inline-block border-b-4 border-[#3772FF]'>Section</h2>
                 </div>
 
@@ -30,9 +23,8 @@ const MainContent = ({ handleDrawerOpen, open }) => {
                 </div>
             </div>
 
-
             <div>
-                <CancelIcon className='text-white float-right mr-5' style={{ marginTop: '-9px', marginLeft: '-10px' }} />
+                <CancelIcon className='text-white float-right mr-7' style={{ marginTop: '-9px', marginLeft: '-13px' }} />
                 <div className='bg-[#ABE8FF] mx-10 px-5 flex justify-around mt-6 rounded-lg pt-4 pb-1' style={{ marginRight: '-10px' }}>
                     <div>
                         <p className='text-[#2B2557] font-medium text-sm'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -42,7 +34,6 @@ const MainContent = ({ handleDrawerOpen, open }) => {
                     <img src="https://i.ibb.co/KrPcNgx/bit-Coin-removebg-preview.png" alt="BitCoin" style={{ marginBottom: '-13px' }} />
                 </div>
             </div>
-
 
             <div className="flex items-center justify-between mt-7 mx-10 bg-[#191B20] rounded-2xl px-5 py-8">
                 <div>
@@ -57,7 +48,6 @@ const MainContent = ({ handleDrawerOpen, open }) => {
 
                 <button className='rounded-lg text-white bg-[#3772FF] font-semibold px-4 py-1 mr-6'><ExitToAppIcon className='mr-1' /> Custom link</button>
             </div>
-
 
             <div className="grid grid-cols-12 gap-7 mt-7 mx-10">
                 <div className="col-span-12 md:col-span-6">
@@ -94,6 +84,10 @@ const MainContent = ({ handleDrawerOpen, open }) => {
                     </div>
                 </div>
 
+            </div>
+
+            <div className='mt-7 mx-8'>
+                <TableData />
             </div>
 
 

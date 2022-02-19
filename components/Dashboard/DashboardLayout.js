@@ -20,55 +20,66 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import RightSideBar from '../RightSideBar/RightSideBar';
 import MainContent from '../MainContent/MainContent';
+import MenuIcon from '@mui/icons-material/Menu';
+import Section1 from '../Section1/Section1';
+import Section2 from '../Section2/Section2';
+import Section3 from '../Section3/Section3';
+import Section4 from '../Section4/Section4';
+import Section5 from '../Section5/Section5';
+import Section6 from '../Section6/Section6';
+import Section7 from '../Section7/Section7';
+import Section8 from '../Section8/Section8';
+import Documentation from '../Documentation/Documentation';
+
 
 const items = [
     {
-        href: '/dashboard',
+        href: 'home',
         icon: (<AppsIcon fontSize="small" />),
         title: 'Home'
     },
     {
-        href: '/dashboard',
+        href: 'section1',
         icon: (<GraphicEqIcon fontSize="small" />),
         title: 'Section 1'
     },
     {
-        href: '/dashboard',
+        href: 'section2',
         icon: (<ArticleIcon fontSize="small" />),
         title: 'Section 2'
     },
     {
-        href: '/dashboard',
+        href: 'section3',
         icon: (<AttachFileIcon fontSize="small" />),
         title: 'Section 3'
     },
     {
-        href: '/dashboard',
+        href: 'section4',
         icon: (<BentoIcon fontSize="small" />),
         title: 'Section 4'
     },
     {
-        href: '/dashboard',
+        href: 'section5',
         icon: (<BrightnessHighIcon fontSize="small" />),
         title: 'Section 5'
     },
     {
-        href: '/dashboard',
+        href: 'section6',
         icon: (<ChromeReaderModeIcon fontSize="small" />),
         title: 'Section 6'
     },
     {
-        href: '/dashboard',
+        href: 'section7',
         icon: (<BakeryDiningIcon fontSize="small" />),
         title: 'Section 7'
     },
     {
-        href: '/dashboard',
+        href: 'section8',
         icon: (<ShareIcon fontSize="small" />),
         title: 'Section 8'
     },
     {
-        href: '/dashboard',
+        href: 'documentation',
         icon: (<SubjectIcon fontSize="small" />),
         title: 'Documentation'
     },
@@ -169,15 +180,48 @@ const DashboardLayout = () => {
                 {/* Dashboard main */}
                 <Main open={open} className="bg-black min-h-screen">
                     {/* Main content middle */}
-                    <div className='grid grid-cols-12'>
-                        <div className="col-span-8 pt-5">
-                            <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
-                        </div>
+                    <IconButton className='fixed ml-2 mt-8'
+                        onClick={handleDrawerOpen}
+                        edge="start"
+                        sx={{ marginRight: "5px", ...(open && { display: 'none' }) }}>
+                        <MenuIcon className="text-4xl text-white " />
+                    </IconButton>
 
-                        {/* Right Side bar  */}
-                        <div className="col-span-4 border-l border-gray-500 min-h-screen">
-                            <RightSideBar />
-                        </div>
+                    <div className=" ml-5">
+
+                        {panel === "home" ?
+                            <div className='grid grid-cols-12'>
+                                <div className="col-span-8 pt-5">
+                                    <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
+                                </div>
+
+                                {/* Right Side bar  */}
+                                <div className="col-span-4 border-l border-gray-500 min-h-screen">
+                                    <RightSideBar />
+                                </div>
+                            </div>
+                            : panel === "section1" ? <Section1 />
+                                : panel === "section2" ? <Section2 />
+                                    : panel === "section3" ? <Section3 />
+                                        : panel === "section4" ? <Section4 />
+                                            : panel === "section5" ? <Section5 />
+                                                : panel === "section6" ? <Section6 />
+                                                    : panel === "section7" ? <Section7 />
+                                                        : panel === "section8" ? <Section8 />
+                                                            : panel === "documentation" ? <Documentation />
+                                                                :
+                                                                <div className='grid grid-cols-12'>
+                                                                    <div className="col-span-8 pt-5">
+                                                                        <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
+                                                                    </div>
+
+                                                                    {/* Right Side bar  */}
+                                                                    <div className="col-span-4 border-l border-gray-500 min-h-screen">
+                                                                        <RightSideBar />
+                                                                    </div>
+                                                                </div>
+                        }
+
                     </div>
                 </Main>
             </Box>
