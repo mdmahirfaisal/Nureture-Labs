@@ -19,8 +19,8 @@ export default function TableData() {
       <TabContext value={value}>
         <Box >
           <TabList onChange={handleChange} >
-            <Tab className="text-gray-400 font-semibold" sx={{ fontSize: "18px" }} label="First Tab" value="1" />
-            <Tab className="text-gray-400 font-semibold" sx={{ fontSize: "18px" }} label="Second Tab" value="2" />
+            <Tab className="font-semibold" sx={{ fontSize: "18px", color: '#808191' }} label="First Tab" value="1" />
+            <Tab className="font-semibold" sx={{ fontSize: "18px", color: '#808191' }} label="Second Tab" value="2" />
           </TabList>
         </Box>
 
