@@ -34,11 +34,11 @@ export default function TableData() {
           <p className='text-[#808191] text-sm text-center'>REFERRAL EARNING</p>
         </div>
 
-        <TabPanel className='pt-2 px-1' value="1">
+        <TabPanel sx={{ padding: '8px 5px 0' }} value="1">
           <FirstTabData />
         </TabPanel>
 
-        <TabPanel className='pt-2 px-1' value="2">
+        <TabPanel sx={{ padding: '8px 5px 0' }} value="2">
           <SecondTabData />
         </TabPanel>
 

@@ -47,7 +47,7 @@ export default function FirstTabData() {
 
                 <div>
                     <h5 className='text-md font-semibold text-center'>0.0000 BNB</h5>
-                    <p className='text-[#808191] text-md mr-2 text-center'>View on BSC Scan <ExitToAppIcon className='text-xs' /> </p>
+                    <p className='text-[#808191] text-md mr-2 text-center'>View on BSC Scan <ExitToAppIcon fontSize='small' /> </p>
                 </div>
 
             </div>

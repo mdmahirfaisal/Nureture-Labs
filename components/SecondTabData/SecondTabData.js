@@ -29,10 +29,10 @@ export default function SecondTabData() {
                             key={row.name}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
 
-                            <TableCell className='text-white' component="th" scope="row">{row.name}</TableCell>
-                            <TableCell className='text-white' align="center">{row.calories}</TableCell>
-                            <TableCell className='text-white' align="center">{row.fat}</TableCell>
-                            <TableCell className='text-white' align="center">{row.carbs}</TableCell>
+                            <TableCell sx={{ color: 'white' }} component="th" scope="row">{row.name}</TableCell>
+                            <TableCell sx={{ color: 'white' }} align="center">{row.calories}</TableCell>
+                            <TableCell sx={{ color: 'white' }} align="center">{row.fat}</TableCell>
+                            <TableCell sx={{ color: 'white' }} align="center">{row.carbs}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
