@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import DashboardLayout from '../components/Dashboard/DashboardLayout'
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
       </Head>
 
 
-      <h5 className='bg-[#3772FF] text-white py-2 text-1xl font-semibold text-center '>Lorem Ipsum is simply dummy text of the printing</h5>
+      {/* <h5 className='bg-[#3772FF] text-white py-2 text-1xl font-semibold text-center '>Lorem Ipsum is simply dummy text of the printing</h5> */}
 
       <DashboardLayout />
 

@@ -30,7 +30,7 @@ export default function FirstTabData() {
                         <div className="flex items-center ">
                             <p className='text-[#808191] text-md mr-2 text-center'>{data?.type}</p>
                             <div className='flex items-center  bg-[#353945] rounded-full px-3 py-1'>
-                                <img src={data?.chain?.img} className="mr-1" alt="" />
+                                <img src={data?.chain?.img} className="mr-1" alt="Icon" />
                                 <p className='text-xs text-center'>{data?.chain?.name}</p>
                             </div>
 

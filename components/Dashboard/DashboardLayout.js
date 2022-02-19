@@ -30,6 +30,8 @@ import Section6 from '../Section6/Section6';
 import Section7 from '../Section7/Section7';
 import Section8 from '../Section8/Section8';
 import Documentation from '../Documentation/Documentation';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
 
 
 const items = [
@@ -162,10 +164,10 @@ const DashboardLayout = () => {
                             },
                         }} variant="persistent" anchor="left" open={open}>
 
-                        <h5 className='bg-[#3772FF] text-[#3772FF] text-4xl'>b</h5>
+                        <h5 className='bg-[#3772FF] text-[#3772FF] py-5'>.</h5>
 
                         {/* close icon */}
-                        <div className="px-8 flex items-center justify-between mt-8 mb-5">
+                        <div className="px-8 flex items-center justify-between mt-5 mb-5">
                             <h3 className='text-white font-semibold'> <span className='rounded-full text-1xl bg-[#3772FF] px-2 py-1 mr-2'>N</span><span className='text-2xl'>Name</span> </h3>
                             <IconButton onClick={handleDrawerClose}
                                 sx={{ mr: 2, ...(!open && { display: 'none' }) }}
@@ -177,49 +179,56 @@ const DashboardLayout = () => {
                     </Drawer>
                 </div>
 
-                {/* Dashboard main */}
                 <Main open={open} className="bg-black min-h-screen">
-                    {/* Main content middle */}
-                    <IconButton className='fixed'
-                        onClick={handleDrawerOpen}
-                        edge="start"
-                        sx={{ marginX: "5px", marginTop: '30px', ...(open && { display: 'none' }) }}>
-                        <MenuIcon className="text-4xl text-white " />
-                    </IconButton>
+                    <AppBar position="sticky" sx={{ backgroundColor: '#3772FF' }}>
+                        <Toolbar>
+                            <IconButton
+                                onClick={handleDrawerOpen}
+                                size="large"
+                                edge="start"
+                                color="inherit"
+                                aria-label="menu"
+                                sx={{ mr: 2, ...(open && { display: 'none' }) }}
+                            >
+                                <MenuIcon className="text-4xl text-white " />
+                            </IconButton>
+                            <p className='text-center w-full text-xl font-semibold'>Lorem Ipsum is simply dummy text of the printing</p>
+                        </Toolbar>
+                    </AppBar>
 
-                    <div className=" ml-5">
+                    <div >
+                        {
+                            panel === "home" ?
+                                <div className='grid grid-cols-12'>
+                                    <div className="col-span-8 pt-5">
+                                        <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
+                                    </div>
 
-                        {panel === "home" ?
-                            <div className='grid grid-cols-12'>
-                                <div className="col-span-8 pt-5">
-                                    <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
+                                    {/* Right Side bar  */}
+                                    <div className="col-span-4 border-l border-gray-500 min-h-screen">
+                                        <RightSideBar />
+                                    </div>
                                 </div>
+                                : panel === "section1" ? <Section1 />
+                                    : panel === "section2" ? <Section2 />
+                                        : panel === "section3" ? <Section3 />
+                                            : panel === "section4" ? <Section4 />
+                                                : panel === "section5" ? <Section5 />
+                                                    : panel === "section6" ? <Section6 />
+                                                        : panel === "section7" ? <Section7 />
+                                                            : panel === "section8" ? <Section8 />
+                                                                : panel === "documentation" ? <Documentation />
+                                                                    :
+                                                                    <div className='grid grid-cols-12'>
+                                                                        <div className="col-span-8 pt-5">
+                                                                            <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
+                                                                        </div>
 
-                                {/* Right Side bar  */}
-                                <div className="col-span-4 border-l border-gray-500 min-h-screen">
-                                    <RightSideBar />
-                                </div>
-                            </div>
-                            : panel === "section1" ? <Section1 />
-                                : panel === "section2" ? <Section2 />
-                                    : panel === "section3" ? <Section3 />
-                                        : panel === "section4" ? <Section4 />
-                                            : panel === "section5" ? <Section5 />
-                                                : panel === "section6" ? <Section6 />
-                                                    : panel === "section7" ? <Section7 />
-                                                        : panel === "section8" ? <Section8 />
-                                                            : panel === "documentation" ? <Documentation />
-                                                                :
-                                                                <div className='grid grid-cols-12'>
-                                                                    <div className="col-span-8 pt-5">
-                                                                        <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
+                                                                        {/* Right Side bar  */}
+                                                                        <div className="col-span-4 border-l border-gray-500 min-h-screen">
+                                                                            <RightSideBar />
+                                                                        </div>
                                                                     </div>
-
-                                                                    {/* Right Side bar  */}
-                                                                    <div className="col-span-4 border-l border-gray-500 min-h-screen">
-                                                                        <RightSideBar />
-                                                                    </div>
-                                                                </div>
                         }
 
                     </div>
