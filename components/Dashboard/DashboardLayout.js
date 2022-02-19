@@ -154,7 +154,7 @@ const DashboardLayout = () => {
                         <h5 className='bg-[#3772FF] text-[#3772FF] text-4xl'>b</h5>
 
                         {/* close icon */}
-                        <div className="px-8 flex items-center justify-between mt-6 mb-5">
+                        <div className="px-8 flex items-center justify-between mt-8 mb-5">
                             <h3 className='text-white font-semibold'> <span className='rounded-full text-1xl bg-[#3772FF] px-2 py-1 mr-2'>N</span><span className='text-2xl'>Name</span> </h3>
                             <IconButton onClick={handleDrawerClose}
                                 sx={{ mr: 2, ...(!open && { display: 'none' }) }}
@@ -170,12 +170,12 @@ const DashboardLayout = () => {
                 <Main open={open} className="bg-black min-h-screen">
                     {/* Main content middle */}
                     <div className='grid grid-cols-12'>
-                        <div className="col-span-7 pt-5">
+                        <div className="col-span-8 pt-5">
                             <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
                         </div>
 
                         {/* Right Side bar  */}
-                        <div className="col-span-5 border-l border-gray-500 min-h-screen">
+                        <div className="col-span-4 border-l border-gray-500 min-h-screen">
                             <RightSideBar />
                         </div>
                     </div>
