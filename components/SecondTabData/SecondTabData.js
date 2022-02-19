@@ -23,7 +23,7 @@ export default function SecondTabData() {
     return (
         <TableContainer className='rounded-xl' component={Paper}>
             <Table >
-                <TableBody className='bg-[#242731]'>
+                <TableBody sx={{ backgroundColor: '#242731' }}>
                     {rows.map((row) => (
                         <TableRow
                             key={row.name}

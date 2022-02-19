@@ -180,10 +180,10 @@ const DashboardLayout = () => {
                 {/* Dashboard main */}
                 <Main open={open} className="bg-black min-h-screen">
                     {/* Main content middle */}
-                    <IconButton className='fixed ml-2 mt-8'
+                    <IconButton className='fixed'
                         onClick={handleDrawerOpen}
                         edge="start"
-                        sx={{ marginRight: "5px", ...(open && { display: 'none' }) }}>
+                        sx={{ marginX: "5px", marginTop: '30px', ...(open && { display: 'none' }) }}>
                         <MenuIcon className="text-4xl text-white " />
                     </IconButton>
 
