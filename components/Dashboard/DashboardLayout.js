@@ -109,8 +109,6 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 
 const DashboardLayout = () => {
     const [panel, setPanel] = React.useState("")
-    console.log(panel)
-
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const handleDrawerOpen = () => {

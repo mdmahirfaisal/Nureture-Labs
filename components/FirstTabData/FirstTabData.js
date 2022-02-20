@@ -10,7 +10,6 @@ export default function FirstTabData() {
             .then(res => res.json())
             .then(data => {
                 setData(data.data[0])
-                console.log(data.data[0])
             })
             .catch(err => {
                 console.log(err)

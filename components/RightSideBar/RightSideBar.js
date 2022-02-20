@@ -9,7 +9,6 @@ const RightSideBar = () => {
     const [customLink, setCustomLink] = React.useState('');
     console.log(avalanche, customLink)
 
-
     return (
         <>
             <div className='flex items-center flex-wrap justify-evenly mt-6'>
