@@ -17,26 +17,22 @@ export default function FirstTabData() {
     }, [])
 
 
-
     return (
         <>
             <div className='grid grid-cols-4 bg-[#242731] rounded py-3'>
-                <div className='flex items-center justify-center'>
+                <div className='flex items-center flex-wrap	 justify-center'>
                     <img src={data?.img} className="mr-3" alt="Bitcoin" />
-
                     <div>
                         <h5 className='text-md font-semibold text-center'>{data?.asset}</h5>
-                        <div className="flex items-center ">
+                        <div className="flex items-center flex-wrap">
                             <p className='text-[#808191] text-md mr-2 text-center'>{data?.type}</p>
-                            <div className='flex items-center  bg-[#353945] rounded-full px-3 py-1'>
+                            <div className='flex items-center flex-wrap	 bg-[#353945] rounded-full px-3 py-1'>
                                 <img src={data?.chain?.img} className="mr-1" alt="Icon" />
                                 <p className='text-xs text-center'>{data?.chain?.name}</p>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
                 <div>
                     <h5 className='text-md font-semibold text-center'>0.0000 BNB</h5>
                     <p className='text-[#808191] text-md text-center'>{data?.state}</p>

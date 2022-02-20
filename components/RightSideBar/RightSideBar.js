@@ -12,7 +12,7 @@ const RightSideBar = () => {
     return (
         <>
             <div className='flex items-center flex-wrap justify-evenly mt-6'>
-                <div className="flex items-center text-white px-3 bg-[#353945] rounded-xl">
+                <div className="flex items-center text-white px-3 bg-[#353945] rounded-xl mb-2">
 
                     <img src="https://raw.githubusercontent.com/akshita151199/APIs/main/avax.png" alt="Avax" className='object-fill h-5 w-7 mr-2' />
 
@@ -26,7 +26,7 @@ const RightSideBar = () => {
                 </div>
 
 
-                <div className="flex items-center text-white px-3 outline outline-offset-1 outline-1 outline-[#3772FF] rounded-xl">
+                <div className="flex items-center text-white px-3 outline outline-offset-1 outline-1 outline-[#3772FF] rounded-xl mb-2">
 
                     <span className='h-5 w-10 ml-1 mr-3 bg-black text-black border-solid border  py-0 border-[#3772FF] rounded'>-</span>
 
@@ -45,8 +45,8 @@ const RightSideBar = () => {
             <input onChange={e => setCustomLink(e.target.value)} type="text" placeholder='Enter' className='h-10 px-3 text-[#808191] rounded-lg mt-2 bg-[#242731]' style={{ marginLeft: '10%', width: '80%' }} />
 
             <div className='flex items-center flex-wrap justify-evenly mt-6'>
-                <button className='rounded-lg text-white bg-[#3772FF] font-semibold px-4 py-1'><ExitToAppIcon className='mr-1' /> Custom link</button>
-                <button className='rounded-lg text-white bg-black outline outline-offset-1 outline-2 outline-[#242731] rounded-xl font-semibold px-4 py-1'><ExitToAppIcon className='mr-2' /> Cancel</button>
+                <button className='rounded-lg text-white bg-[#3772FF] font-semibold px-4 py-1 mb-2'><ExitToAppIcon className='mr-1' /> Custom link</button>
+                <button className='rounded-lg text-white bg-black outline outline-offset-1 outline-2 outline-[#242731] rounded-xl font-semibold px-4 py-1 mb-2'><ExitToAppIcon className='mr-2' /> Cancel</button>
             </div>
         </>
     );

@@ -134,12 +134,12 @@ const DashboardLayout = () => {
                         />
                     ))}
                 </Box>
-                <div className='flex items-center justify-center mb-5'>
+                <div className='flex items-center flex-wrap	justify-center mb-5'>
                     <h3 className='bg-[#353945] rounded-full px-3 py-1 font-semibold'> <span className='rounded-full px-1 bg-[#3772FF]  mr-1'>N</span><span className=''>$0.90</span> </h3>
                     <h3 className='bg-[#A3E3FF] rounded-full px-3 py-1 font-semibold text-[#3772FF] ml-2'>Buy $XYZ</h3>
 
                 </div>
-                <div className='flex items-center mb-6 ml-5'>
+                <div className='flex items-center flex-wrap	mb-6 ml-5'>
                     <LanguageIcon className='text-[#808191] text-3xl' />
                     <div className='bg-[#353945] rounded-full ml-2 px-2'><DarkModeIcon className='text-[#808191] text-2xl' /> <Brightness1Icon className='text-[#3772FF] text-3xl' /></div>
                 </div>
@@ -190,7 +190,7 @@ const DashboardLayout = () => {
                             >
                                 <MenuIcon fontSize='large' className=" text-white " />
                             </IconButton>
-                            <p className='text-center w-full text-xl font-semibold'>Lorem Ipsum is simply dummy text of the printing</p>
+                            <p className='text-center w-full text-md sm:text-xl sm:font-semibold'>Lorem Ipsum is simply dummy text of the printing</p>
                         </Toolbar>
                     </AppBar>
 
@@ -218,12 +218,12 @@ const DashboardLayout = () => {
                                                                 : panel === "documentation" ? <Documentation />
                                                                     :
                                                                     <div className='grid grid-cols-12'>
-                                                                        <div className="col-span-8 pt-5">
+                                                                        <div className="col-span-12 md:col-span-8 pt-5">
                                                                             <MainContent handleDrawerOpen={handleDrawerOpen} open={open} />
                                                                         </div>
 
                                                                         {/* Right Side bar  */}
-                                                                        <div className="col-span-4 border-l border-gray-500 min-h-screen">
+                                                                        <div className="col-span-12 md:col-span-4 border-l border-gray-500 min-h-screen">
                                                                             <RightSideBar />
                                                                         </div>
                                                                     </div>
