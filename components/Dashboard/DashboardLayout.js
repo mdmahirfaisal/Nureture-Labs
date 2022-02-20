@@ -172,7 +172,7 @@ const DashboardLayout = () => {
                             <IconButton onClick={handleDrawerClose}
                                 sx={{ mr: 2, ...(!open && { display: 'none' }) }}
                                 className="fs-2">
-                                {theme.direction === 'ltr' ? <KeyboardBackspaceIcon className="text-4xl text-white mt-1" /> : <KeyboardBackspaceIcon className="text-4xl mt-1" />}
+                                {theme.direction === 'ltr' ? <KeyboardBackspaceIcon fontSize='large' className="text-white mt-1" /> : <KeyboardBackspaceIcon fontSize='large' className=" mt-1" />}
                             </IconButton>
                         </div>
                         {content}
@@ -190,7 +190,7 @@ const DashboardLayout = () => {
                                 aria-label="menu"
                                 sx={{ mr: 2, ...(open && { display: 'none' }) }}
                             >
-                                <MenuIcon className="text-4xl text-white " />
+                                <MenuIcon fontSize='large' className=" text-white " />
                             </IconButton>
                             <p className='text-center w-full text-xl font-semibold'>Lorem Ipsum is simply dummy text of the printing</p>
                         </Toolbar>

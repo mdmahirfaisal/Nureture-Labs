@@ -43,7 +43,7 @@ export default function FirstTabData() {
                     <p className='text-[#808191] text-md text-center'>{data?.state}</p>
                 </div>
 
-                <h5 className='text-md font-semibold text-center'>{data?.user?.slice(0, 8)}</h5>
+                <h5 className='text-md font-semibold text-center'>{data?.user?.slice(0, 12)}</h5>
 
                 <div>
                     <h5 className='text-md font-semibold text-center'>0.0000 BNB</h5>
